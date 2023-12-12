@@ -1,27 +1,35 @@
 <?php
 
-$name = 'Илья';
-$surname = 'Харченко';
-$date = 29;
-$month = 'Март';
-$year = 2006;
-$age = 17;
-$happy = 0.99;
+$x = 5.6;
+$y = 8.9;
 
-echo ' Имя: ' . $name . ' Фамилия: ' . $surname . '<br>';
-echo ' Дата рождения: ' .  $date . "\n" . $month . "\n" . $year . '<br>';
-echo ' Возраст: ' . $age . '<br>';
-echo ' Уровень радости: ' . $happy . ' :) ' . '<br>';
+$sum = $x + $y;
+$diff = $x - $y;
+$mult = $x * $y;
+$devide = $x / $y;
+$ostatok = $x % $y;
 
-$hasCar = false;
-$number = -0.78902;
+echo ' Cумма: ' . $sum . "\n";
+echo ' Разница: ' . $diff . "\n";
+echo ' Умножение: ' . $mult . "\n";
+echo ' Деление: ' . $devide . "\n";
+echo ' Остаток: ' . $ostatok . "\n";
 
-echo "Есть машина? " .  $hasCar . '<br> ';
-echo 'Номер : ' . $number . '<br>';
+$number = -2;
+$number *= 3;
+// ++ добавляет +1, -- добавляет -1
+$number++;
 
-define("NUMBER_E", 2.71828);
-echo defined("NUMBER_E");
-const NUMBER_K = '<br>2';
-echo NUMBER_K;
+echo " Результат: " . $number . "\n";
 
+// метод max находит наибольшее число
+// метод min находит наименьшее число
+echo max( 9, 23, 0, -24.5, 34, 11, 41, 3, -3.2, 3 ) . "\n";
 
+// Метод mt_rand or rand выводит рандомное чилсло
+echo mt_rand(1, 10);
+
+// Метод ceil округляет к большему
+// Метод round округляет до ближайшего значения
+// Метод floor округляет к меньшему
+echo floor(sqrt(2));
