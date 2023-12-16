@@ -1,35 +1,27 @@
 <?php
 
-$x = 5.6;
-$y = 8.9;
+echo "\" <br>";
+echo "' <br>";
+echo "\\ <br>";
+echo "\n <br>";
+echo "<div>Block</div> <br>";
 
-$sum = $x + $y;
-$diff = $x - $y;
-$mult = $x * $y;
-$devide = $x / $y;
-$ostatok = $x % $y;
+echo "\" <br>" . "' <br>" . "\\ <br>" . "\n <br>" . "<div>Block</div> <br>";
 
-echo ' Cумма: ' . $sum . "\n";
-echo ' Разница: ' . $diff . "\n";
-echo ' Умножение: ' . $mult . "\n";
-echo ' Деление: ' . $devide . "\n";
-echo ' Остаток: ' . $ostatok . "\n";
+$str =  "ASDПросто текстASD";
 
-$number = -2;
-$number *= 3;
-// ++ добавляет +1, -- добавляет -1
-$number++;
+// С помощью данной функции можно удалять какие-либо сивмволы строки.
+$newStr = substr($str , 0, strlen($str) -3 );
 
-echo " Результат: " . $number . "\n";
+$loverCase = substr($newStr, 0, 3 );
 
-// метод max находит наибольшее число
-// метод min находит наименьшее число
-echo max( 9, 23, 0, -24.5, 34, 11, 41, 3, -3.2, 3 ) . "\n";
+// С помощью этой функции строку можно сделать в нижний регистр, strtoaupper - в верхний регистр.
+$result = strtolower($loverCase);
 
-// Метод mt_rand or rand выводит рандомное чилсло
-echo mt_rand(1, 10);
+// С помощью оператора .= можно обьеденить две строки.
+$result .= substr($newStr , 3);
 
-// Метод ceil округляет к большему
-// Метод round округляет до ближайшего значения
-// Метод floor округляет к меньшему
-echo floor(sqrt(2));
+
+$three = substr($result, 0, 3);
+
+echo $three;
