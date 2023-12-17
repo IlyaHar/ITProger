@@ -1,48 +1,41 @@
 <?php
 
-$a = 23;
+$x = 11;
 
-if ($a == 5) {
-    echo 10;
-} elseif ($a == 10) {
-    echo 15;
-} elseif ($a == 30) {
-    echo 20;
-} else {
-    echo 'Что-то не то! <br>';
+switch ($x) {
+    case 10:
+        echo 'Number is 10 ';
+        break;
+    case 15:
+        echo 'Number is 15';
+        break;
+    default:
+        echo 'Something else <br>';
+        break;
 }
 
-$x = 4.2;
-$y = 5.6;
-
-echo $x == 15;
-echo $y >= 6;
-echo $x == $y;
-
-$a = 34;
-
-echo ($a < 50 && $a != 37 && $a >= 32 || $a == 0 && $a == 15);
-
-$x = 7;
-$y = "7";
-
-$res = $x === $y;
-echo "$x === $y = $res <br>";
-
-
-$a = 1;
+$a = 4;
 $b = 2;
-if ($a % 2 == 0) {
-    echo $b . ' - нечетное число <br>';
-} else {
-    echo $a . ' - нечетное число <br>';
+
+$mathOperation = '+';
+
+switch ($mathOperation) {
+    case '+':
+        $res = $a + $b;
+        echo 'Результат: ' . $res;
+        break;
+    case '-':
+        echo $a - $b;
+        break;
+    case '*':
+        echo $a * $b;
+        break;
+    case '/' || ':':
+        echo $a / $b;
+        break;
+    case '%':
+        echo $a % $b;
+        break;
+    default:
+        echo 'Данный пример посчитать невозможно!';
 }
-
-
-
-// Это короткое условие говорит о том что, если $b != НЕ равно 0, то тогда выполнится деление $a на $b ( $a / $b),
-// если же $b РАВНО 0, то тогда выведится 1 (:1)
-$a = 5;
-$b = -3;
-$res = $b != 0 ? ($a / $b) : 1;
-echo "Результат: $res";
