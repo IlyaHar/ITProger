@@ -1,27 +1,48 @@
 <?php
 
-echo "\" <br>";
-echo "' <br>";
-echo "\\ <br>";
-echo "\n <br>";
-echo "<div>Block</div> <br>";
+$a = 23;
 
-echo "\" <br>" . "' <br>" . "\\ <br>" . "\n <br>" . "<div>Block</div> <br>";
+if ($a == 5) {
+    echo 10;
+} elseif ($a == 10) {
+    echo 15;
+} elseif ($a == 30) {
+    echo 20;
+} else {
+    echo 'Что-то не то! <br>';
+}
 
-$str =  "ASDПросто текстASD";
+$x = 4.2;
+$y = 5.6;
 
-// С помощью данной функции можно удалять какие-либо сивмволы строки.
-$newStr = substr($str , 0, strlen($str) -3 );
+echo $x == 15;
+echo $y >= 6;
+echo $x == $y;
 
-$loverCase = substr($newStr, 0, 3 );
+$a = 34;
 
-// С помощью этой функции строку можно сделать в нижний регистр, strtoaupper - в верхний регистр.
-$result = strtolower($loverCase);
+echo ($a < 50 && $a != 37 && $a >= 32 || $a == 0 && $a == 15);
 
-// С помощью оператора .= можно обьеденить две строки.
-$result .= substr($newStr , 3);
+$x = 7;
+$y = "7";
+
+$res = $x === $y;
+echo "$x === $y = $res <br>";
 
 
-$three = substr($result, 0, 3);
+$a = 1;
+$b = 2;
+if ($a % 2 == 0) {
+    echo $b . ' - нечетное число <br>';
+} else {
+    echo $a . ' - нечетное число <br>';
+}
 
-echo $three;
+
+
+// Это короткое условие говорит о том что, если $b != НЕ равно 0, то тогда выполнится деление $a на $b ( $a / $b),
+// если же $b РАВНО 0, то тогда выведится 1 (:1)
+$a = 5;
+$b = -3;
+$res = $b != 0 ? ($a / $b) : 1;
+echo "Результат: $res";
