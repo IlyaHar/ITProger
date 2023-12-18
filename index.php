@@ -1,73 +1,76 @@
 <?php
 
-for ($i = 1; $i <= 10; $i++) {
+for ($i = 16; $i <= 23; $i++) {
+    if ($i == 21) {
+        continue;  // Пропускает елемент в массиве
+    }
+    echo $i . '<br>';
+}
+
+$element = 16;
+
+while ($element <= 23) {
+    if ($element == 21) {
+        $element++;
+        continue;
+    }
+    echo $element . '<br>';
+    $element++;
+}
+
+for ($index = 11; $index <= 33; $index++) {
+    echo $index . '<br>';
+}
+
+$array = 11;
+
+while ($array <= 33) {
+
+    echo $array . '<br>';
+    $array++;
+}
+
+for ($i = -30; $i <= 0; $i += 3) {
     echo $i . '<br>';
 }
 
 
-$str_res = '';
-$array_1 = array(1, 2, 3, 5, 7, 9, 10);
-$array_2 = [1, 4, 3, 5, 8, 9, 0];
-
-for ($i = 0; $i < count($array_1); $i++) {
-    for ($j = 0; $j < count($array_2); $j++)
-        if ($array_1[$i] == $array_2[$j]) {
-            $str_res .= $array_1[$i] . ';' . '<br>';
-        }
-}
-
-echo $str_res;
+  $element = -30;
+do {
+    echo $element . '<br>';
+    $element += 3;
+} while ($element <= 0);
 
 
-$elements = [3, -2, 9, -34, 23, -12, 1];
-$sum = 0;
-
-for ($i = 0; $i < count($elements); $i++) {
-    if ($elements[$i] >= 0)
-        $sum += $elements[$i];
-}
-
-if ($sum == 0) {
-    echo ' Нет чисел > 0 ';
-} else {
-    echo 'Сумма :' . $sum . '<br>';
-}
-
-$arr = [1, 10, 20, 30, 40, 50, 100];
-$max = $arr[0];
-
-for ($i = 0; $i < 7; $i++) {
-    if ($arr[$i] > $max); {
-        $max = $arr[$i];
+for ($i = -30; $i <= 0; $i += 3) {
+    if ($i == -27 || $i == -21 || $i == -15) {
+        continue;
     }
+    echo $i . '<br>';
 }
 
-echo "Максимум: $max <br>";
+$element = -30;
 
-$matrix = [
-    [ 0, 34, -2],
-    [3, -4, 5 ]
-];
-
-$min = $matrix[0][0];
-
-for ($i = 0; $i < count($matrix); $i++) {
-    for ($j = 0; $j < count($matrix[$i]); $j++) {
-        if ($matrix[$i][$j] < $min) {
-            $min = $matrix[$i][$j];
-        }
+do {
+    if ($element == -27 || $element == -21 || $element == -15) {
+        $element+= 3;
+        continue;
     }
-}
+    echo $element . '<br>';
+    $element += 3;
+} while($element <= 0);
 
-echo "Минимальный элемент: $min <br>";
-
-$user = [
+$arr = [
     'name' => 'John',
     'surname' => 'Smith',
     'email' => 'johnsmith@gmail.com',
-    'phone' => 1234512345
+    'phone' => '1234512345'
 ];
 
-foreach ($user as $item => $value) {
-    echo $item . ':' . "\n" . $value . "<br>";
+foreach ($arr as $item => $value) {
+    echo $item . ':' . "\n" . $value . '<br>';
+}
+
+foreach ($arr as  $value) {
+    echo  $value . '<br>';
 }
