@@ -1,76 +1,63 @@
 <?php
 
-for ($i = 16; $i <= 23; $i++) {
-    if ($i == 21) {
-        continue;  // Пропускает елемент в массиве
+function checkAge($age)
+{
+    if ($age >= 18) {
+        return true;
+    } else {
+        echo 'Родители разрешили ?' . '<br>';
     }
-    echo $i . '<br>';
 }
 
-$element = 16;
+checkAge(17);
 
-while ($element <= 23) {
-    if ($element == 21) {
-        $element++;
-        continue;
-    }
-    echo $element . '<br>';
-    $element++;
+// 1 вариант реализации данной функции  :
+function distance($time, $speed): float
+{
+    return $time * $speed;
 }
 
-for ($index = 11; $index <= 33; $index++) {
-    echo $index . '<br>';
+ $distance = distance(1, 1);
+
+echo "Вы проедете: $distance километров <br> ";
+
+// 2 вариант реализации данной функции
+
+function kmCount($hour, $km): float
+{
+    $res = $hour * $km;
+    printRes($res);
+    return $res;
 }
 
-$array = 11;
-
-while ($array <= 33) {
-
-    echo $array . '<br>';
-    $array++;
+function printRes($res): void
+{
+    // Это короткая условная конструкция , где говорится если расстояние будет равно 1 ($res == 1), то (?) выведится текст "Вы проедете 1 км <br>",
+    // иначе ":" выведится текст "Вы проедете $res км <br>"
+    $word = $res == 1 ? "Вы проедете 1 км <br>" : "Вы проедете $res км <br>";
+    echo $word;
 }
 
-for ($i = -30; $i <= 0; $i += 3) {
-    echo $i . '<br>';
+$res = kmCount(14, 75);
+
+
+function test()
+{
+    global $count; // $count = 0;
+    $count++;
+    echo 'Количество вызовов: ' . $count . '<br>';
 }
 
+test();
+test();
+test();
+test();
+test();
+test();
+test();
+test();
+test();
+test();
 
-  $element = -30;
-do {
-    echo $element . '<br>';
-    $element += 3;
-} while ($element <= 0);
 
 
-for ($i = -30; $i <= 0; $i += 3) {
-    if ($i == -27 || $i == -21 || $i == -15) {
-        continue;
-    }
-    echo $i . '<br>';
-}
-
-$element = -30;
-
-do {
-    if ($element == -27 || $element == -21 || $element == -15) {
-        $element+= 3;
-        continue;
-    }
-    echo $element . '<br>';
-    $element += 3;
-} while($element <= 0);
-
-$arr = [
-    'name' => 'John',
-    'surname' => 'Smith',
-    'email' => 'johnsmith@gmail.com',
-    'phone' => '1234512345'
-];
-
-foreach ($arr as $item => $value) {
-    echo $item . ':' . "\n" . $value . '<br>';
-}
-
-foreach ($arr as  $value) {
-    echo  $value . '<br>';
-}
