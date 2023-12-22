@@ -1,2 +1,3 @@
 <?php
-phpinfo();
+require 'vendor/autoload.php';
+require_once 'home.php';
