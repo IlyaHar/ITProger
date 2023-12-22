@@ -1,5 +1,3 @@
 <?php
-
-define('BASE_DIR', dirname(__DIR__));
-
+require 'vendor/autoload.php';
 require_once 'home.php';
