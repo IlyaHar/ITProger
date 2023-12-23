@@ -1,21 +1,15 @@
 <?php
+//header('Location: https://itproger.com/courses/');
+//exit();
 require 'vendor/autoload.php';
 require_once 'home.php';
 
- $fileName = 'test.txt';
-
+phpinfo();
 // 1 вариант
-$file = fopen($fileName, 'w');
-fwrite($file, 'Это наш первый созданный файл при помощи PHP');
-fclose($file);
-file_put_contents('someText.txt', 'Это наш первый созданный файл при помощи PHP' );
-echo file_get_contents('fileToSave.txt') . '<br>';
+echo "<pre>" . $_SERVER['HTTP_HOST'] . '</pre>';
+echo $_SERVER['REQUEST_URI'] . '<br>';
 
-
-// rename($fileName, 'fileToSave.txt');
 // 2 вариант
-file_put_contents('someText.txt', 'Это наш первый созданный файл при помощи PHP');
-echo file_get_contents('someText.txt') . '<br>';
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+echo $actual_link;
 
-echo fileperms(__FILE__);
-chmod(__FILE__, 0777);
