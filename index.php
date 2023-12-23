@@ -1,15 +1,13 @@
 <?php
-//header('Location: https://itproger.com/courses/');
-//exit();
 require 'vendor/autoload.php';
 require_once 'home.php';
 
-phpinfo();
-// 1 вариант
-echo "<pre>" . $_SERVER['HTTP_HOST'] . '</pre>';
-echo $_SERVER['REQUEST_URI'] . '<br>';
+$from = 'testing@mail.ru';
+$to = 'example@mail.ru';
+$message = 'Проверочное письмо, отправленное с помощью PHP';
+$subject = 'Тема сообщения';
 
-// 2 вариант
-$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-echo $actual_link;
+$subject = "=?utf-8?B?" . base64_decode($subject) . "?=";
+$headers = "From: $from\r\n Reply-to: $from\r\n Content-type:text/plain; charset=utf-8\r\n";
 
+mail($to, $subject, $message, $headers);
