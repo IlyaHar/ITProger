@@ -2,52 +2,49 @@
 require 'vendor/autoload.php';
 require_once 'home.php';
 
- echo date('Y-m-d | H:i:s', strtotime('+ 2 hours') ) . '<br>';
+$u = 45;
+$c = 5.9;
+// 1 вариант
+ echo is_numeric($u) . '<br>';
+ echo is_object($c) . '<br>';
+ echo is_float($c) . '<br>';
+ // 2 вариант
+ echo is_integer($u) . '<br>';
+ // Является ли перемення обьектом is_scalar
+ echo is_scalar($c) . '<br>';
+ // Является ли переменная дробной is_double
+ echo is_double($c) . '<br>';
+ // Возвращает тип данных
+ echo gettype($u) . '<br>';
+ echo is_array($c) . '<br>';
 
 
-$date = date('d ');
-$date .= rusMonth(date('m'));
-echo $date;
+ $arr = array(2, -14, 23, 9, -4, 12, -1) ;
+// echo min($arr) . '<br>';
 
-// Можно без break; Так как есть return
-function rusMonth($month)
-{
-    switch ($month) {
-        case 1:
-            return 'Января';
-            break;
-        case 2:
-            return 'Февраля';
-            break;
-        case 3:
-            return 'Марта';
-            break;
-        case 4:
-            return 'Апреля';
-            break;
-        case 5:
-            return 'Мая';
-            break;
-        case 6:
-            return 'Июня';
-            break;
-        case 7:
-            return 'Июля';
-            break;
-        case 8:
-            return 'Августа';
-            break;
-        case 9:
-            return 'Сентября';
-            break;
-        case 10:
-            return 'Октября';
-            break;
-        case 11:
-            return 'Ноября';
-            break;
-        case 12:
-            return 'Декабря';
-            break;
-    }
+$minimum = $arr[0];
+
+for ($i = 0; $i < count($arr); $i++) {
+    if ($arr[$i] < $minimum && $arr[$i] > 0)
+        $minimum = $arr[$i];
 }
+
+echo "Минимум - $minimum <br>";
+
+
+$arr = array(2, -14, 23);
+$arr_2 = [9, -4, 12, -1];
+// Соеденяет массивы
+$array = array_merge($arr, $arr_2);
+// Разбрасывает элементы массива в разном порядке
+shuffle($array);
+// Удаляет элемент массива по индексу
+unset($array[0]);
+// Сортирует элементы массива от меньшего к большему, rsort REVERSE наоборот от большего к меньшему
+sort($array);
+// Обновляет индексы массива
+$array = array_values($array);
+// Ищет элемент в массиве
+$array = in_array(2, $array);
+// Выводит массив
+print_r($array);
