@@ -1,0 +1,12 @@
+{
+    "name": "root/html",
+    "autoload": {
+        "psr-4": {
+            "Root\\Html\\": "src/"
+        }
+    },
+    "require": {
+        "twbs/bootstrap-icons": "^1.11",
+        "larapack/dd": "^1.1"
+    }
+}
