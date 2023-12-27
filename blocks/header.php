@@ -22,7 +22,7 @@
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="/" class="nav-link px-2">Home</a></li>
             <li><a href="/form.php" class="nav-link px-2">Form</a></li>
-            <li><a href="#" class="nav-link px-2">Pricing</a></li>
+            <li><a href="../cookieForm/hello.php" class="nav-link px-2">Hello</a></li>
             <li><a href="#" class="nav-link px-2">FAQs</a></li>
             <li><a href="/aboutUs.php" class="nav-link px-2">About</a></li>
         </ul>
