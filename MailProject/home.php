@@ -1,6 +1,6 @@
 <?php
 $title = 'Отправка сообщения';
-require_once 'blocks/header.php';
+require 'blocks/header.php';
 ?>
 <div class="container">
     <h1>Отправка сообщения</h1>
@@ -13,6 +13,7 @@ require_once 'blocks/header.php';
     </form>
     <div id="errorMess"></div>
 </div>
+
 <?php
-require_once 'blocks/footer.php';
+require 'blocks/footer.php';
 ?>

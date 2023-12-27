@@ -1,13 +1,15 @@
 <?php
-require 'vendor/autoload.php';
-require_once 'home.php';
+session_start();
+setcookie("age",  mt_rand(10, 70), time() + 3600);
+setcookie("age",  mt_rand(10, 70), time() + 10800);
+setcookie("age",  mt_rand(10, 70), time() + 86400);
+setcookie("age",  mt_rand(10, 70), time() - 86400);
+setcookie("age",  mt_rand(10, 70), time() + 86400 * 30 * 12);
+echo $_COOKIE["age"];
 
-$from = 'testing@mail.ru';
-$to = 'example@mail.ru';
-$message = 'Проверочное письмо, отправленное с помощью PHP';
-$subject = 'Тема сообщения';
+$_SESSION['date'] = time();
 
-$subject = "=?utf-8?B?" . base64_decode($subject) . "?=";
-$headers = "From: $from\r\n Reply-to: $from\r\n Content-type:text/plain; charset=utf-8\r\n";
+if ($_SESSION['date'] != 0) {
+    echo date('Y m d - H:i:s', time() - $_SESSION['date']);
+}
 
-mail($to, $subject, $message, $headers);
