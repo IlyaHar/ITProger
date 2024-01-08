@@ -23,7 +23,7 @@
             <li><a href="/" class="nav-link px-2">Home</a></li>
             <li><a href="/form.php" class="nav-link px-2">Form</a></li>
             <li><a href="../cookieForm/hello.php" class="nav-link px-2">Hello</a></li>
-            <li><a href="#" class="nav-link px-2">FAQs</a></li>
+            <li><a href="/contact.php" class="nav-link px-2">Contact</a></li>
             <li><a href="/aboutUs.php" class="nav-link px-2">About</a></li>
         </ul>
 
